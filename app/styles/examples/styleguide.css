@@ -1,0 +1,613 @@
+/**
+@category Basic Style Guide
+@section Colors
+@title Font colors
+@description
+These represent the basic font colors applied in the application
+@example
+<div>default</div>
+<div class="font-color-1">font-color-1</div>
+<div class="font-color-2">font-color-2</div>
+<div class="font-color-3">font-color-3</div>
+<div class="font-color-4">font-color-4</div>
+<div class="font-color-5">font-color-5</div>
+<div class="font-color-6">font-color-6</div>
+<div class="font-color-7">font-color-7</div>
+<div class="font-color-8">font-color-8</div>
+<div class="font-color-9">font-color-9</div>
+<div class="font-color-10" style="background-color: black;">font-color-10</div>
+*/
+
+.font-color-1 {
+    color: red;
+}
+
+.font-color-2 {
+    color: orange;
+}
+
+.font-color-3 {
+    color: yellow;
+}
+
+.font-color-4 {
+    color: green;
+}
+
+.font-color-5 {
+    color: blue;
+}
+
+.font-color-6 {
+    color: indigo;
+}
+
+.font-color-7 {
+    color: violet;
+}
+
+.font-color-8 {
+    color: darkgray;
+}
+
+.font-color-9 {
+    color: lightgray;
+}
+
+.font-color-10 {
+    color: white;
+}
+
+/**
+@category Basic Style Guide
+@section Colors
+@title Border colors
+@description
+These represent the basic border and line colors applied in the application
+@example:hidden
+default
+<hr/>
+bd-color-1
+<hr class="bd-color-1"/>
+bd-color-2
+<hr class="bd-color-2"/>
+bd-color-3
+<hr class="bd-color-3"/>
+bd-color-4
+<hr class="bd-color-4"/>
+bd-color-5
+<hr class="bd-color-5"/>
+bd-color-6
+<hr class="bd-color-6"/>
+bd-color-7
+<hr class="bd-color-7"/>
+bd-color-8
+<hr class="bd-color-8"/>
+bd-color-9
+<hr class="bd-color-9"/>
+bd-color-10
+<div style="background-color: black; padding: 2px">
+    <hr class="bd-color-10">
+</div>
+*/
+
+.bd-color-1 {
+    border-color: red;
+}
+
+.bd-color-2 {
+    border-color: orange;
+}
+
+.bd-color-3 {
+    border-color: yellow;
+}
+
+.bd-color-4 {
+    border-color: green;
+}
+
+.bd-color-5 {
+    border-color: blue;
+}
+
+.bd-color-6 {
+    border-color: indigo;
+}
+
+.bd-color-7 {
+    border-color: violet;
+}
+
+.bd-color-8 {
+    border-color: darkgray;
+}
+
+.bd-color-9 {
+    border-color: lightgray;
+}
+
+.bd-color-10 {
+    border-color: white;
+}
+
+/**
+@category Basic Style Guide
+@section Colors
+@title Background colors
+@description
+These represent the basic element background colors applied in the application
+@example
+<style type="text/css" scoped>
+    #style-guide-bg-colors span {
+        width: 100px;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 5px;
+        line-height: 50px;
+    }
+</style>
+<div id="style-guide-bg-colors">
+    <span>default</span>
+    <span class="bg-color-1">bg-color-1</span>
+    <span class="bg-color-2">bg-color-2</span>
+    <span class="bg-color-3">bg-color-3</span>
+    <span class="bg-color-4">bg-color-4</span>
+    <span class="bg-color-5">bg-color-5</span>
+    <span class="bg-color-6">bg-color-6</span>
+    <span class="bg-color-7">bg-color-7</span>
+    <span class="bg-color-8">bg-color-8</span>
+    <span class="bg-color-9">bg-color-9</span>
+    <span class="bg-color-10">bg-color-10</span>
+</div>
+*/
+
+.bg-color-1 {
+    background-color: red;
+    color: white;
+    text-shadow: black 1px 1px;
+}
+
+.bg-color-2 {
+    background-color: orange;
+    color: white;
+    text-shadow: black 1px 1px;
+}
+
+.bg-color-3 {
+    background-color: yellow;
+    color: black;
+    text-shadow: white 1px 1px;
+}
+
+.bg-color-4 {
+    background-color: green;
+    color: white;
+    text-shadow: black 1px 1px;
+}
+
+.bg-color-5 {
+    background-color: blue;
+    color: white;
+    text-shadow: black 1px 1px;
+}
+
+.bg-color-6 {
+    background-color: indigo;
+    color: white;
+    text-shadow: black 1px 1px;
+}
+
+.bg-color-7 {
+    background-color: violet;
+    color: black;
+    text-shadow: white 1px 1px;
+}
+
+.bg-color-8 {
+    background-color: darkgray;
+    color: black;
+    text-shadow: white 1px 1px;
+}
+
+.bg-color-9 {
+    background-color: lightgray;
+    color: black;
+    text-shadow: white 1px 1px;
+}
+
+.bg-color-10 {
+    background-color: black;
+    color: white;
+    text-shadow: none;
+}
+
+/**
+@category Basic Style Guide
+@section Typography
+@title Fonts
+@description
+These represent the standard font face used in the application. Standard font size is <code>16px</code> with
+<code>'Helvetica Neue', Helvetica, Arial, sans-serif</code> font family.
+@example
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{|}~!"#$%&'()*+,-./:;&lt;=&gt;?&#64;[\]^_`</p>
+<p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{|}~!"#$%&'()*+,-./:;&lt;=&gt;?&#64;[\]^_`</strong></p>
+<p><em>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{|}~!"#$%&'()*+,-./:;&lt;=&gt;?&#64;[\]^_`</em></p>
+<p><strong><em>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{|}~!"#$%&'()*+,-./:;&lt;=&gt;?&#64;[\]^_`</em></strong></p>
+*/
+html {
+    /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+}
+
+/**
+@category Basic Style Guide
+@section Typography
+@title Headings
+@description
+<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.</p>
+@example
+<div class="gigantic">Gigantic</div>
+<h1>h1. Heading 1</h1>
+<h2>h2. Heading 2</h2>
+<h3>h3. Heading 3</h3>
+<h4>h4. Heading 4</h4>
+<h5>h5. Heading 5</h5>
+<h6>h6. Heading 6</h6>
+@note
+You may also use <code>.h1</code> thru <code>.h6</code> as class values for any non heading element.
+*/
+.gigantic, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, blockquote {
+    /*line-height: 1.33em;
+    margin: 0;*/
+}
+
+.gigantic {
+    font-size: 3em;
+}
+
+h1, .h1 {
+    /*font-size: 2.5em;*/
+}
+
+h2, .h2 {
+    /*font-size: 2em;*/
+}
+
+h3, .h3 {
+    /*font-size: 1.5em;*/
+}
+
+h4, .h4 {
+    /*font-size: 1.25em;*/
+}
+
+h5, .h5 {
+    /*font-size: 1em;*/
+}
+
+h6, .h6 {
+    /*font-size: 0.75em;*/
+}
+
+/**
+@category Basic Style Guide
+@section Typography
+@title Paragraph
+@description
+General body text for paragraph spacing, indentation and wrapping.
+@example
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus vestibulum elit, a tempor neque sodales et. Donec sed mauris non neque gravida fringilla. Aenean id sollicitudin risus. Suspendisse potenti. Donec enim justo, porttitor ut tristique eget, ornare eget nisl. Morbi in leo erat, vel sodales lectus. Aenean rhoncus ante a nibh fringilla semper hendrerit eros porttitor. In at nunc nec nunc aliquam dignissim. Suspendisse potenti.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus vestibulum elit, a tempor neque sodales et. Donec sed mauris non neque gravida fringilla. Aenean id sollicitudin risus. Suspendisse potenti. Donec enim justo, porttitor ut tristique eget, ornare eget nisl. Morbi in leo erat, vel sodales lectus. Aenean rhoncus ante a nibh fringilla semper hendrerit eros porttitor. In at nunc nec nunc aliquam dignissim. Suspendisse potenti.</p>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus vestibulum elit, a tempor neque sodales et. Donec sed mauris non neque gravida fringilla. Aenean id sollicitudin risus. Suspendisse potenti. Donec enim justo, porttitor ut tristique eget, ornare eget nisl. Morbi in leo erat, vel sodales lectus. Aenean rhoncus ante a nibh fringilla semper hendrerit eros porttitor. In at nunc nec nunc aliquam dignissim. Suspendisse potenti.</div>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus vestibulum elit, a tempor neque sodales et. Donec sed mauris non neque gravida fringilla. Aenean id sollicitudin risus. Suspendisse potenti. Donec enim justo, porttitor ut tristique eget, ornare eget nisl. Morbi in leo erat, vel sodales lectus. Aenean rhoncus ante a nibh fringilla semper hendrerit eros porttitor. In at nunc nec nunc aliquam dignissim. Suspendisse potenti.</div>
+*/
+div {
+
+}
+
+p {
+
+}
+
+/**
+@category Basic Style Guide
+@section Typography
+@title Link
+@description
+Basic hyperlinks in the application
+@example
+<a href="#">Normal Link</a>
+|
+<a href="#" class="hover">Hover Link</a>
+*/
+a {
+    /*text-decoration: none;*/
+}
+
+a:hover,
+a.hover {
+    /*text-decoration: underline;*/
+}
+
+a:active {
+
+}
+
+/**
+@category Basic Style Guide
+@section Typography
+@title Blockquote
+@description
+Quoted text used in application
+@example
+<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus vestibulum elit, a tempor neque sodales et. Donec sed mauris non neque gravida fringilla. Aenean id sollicitudin risus. Suspendisse potenti. Donec enim justo, porttitor ut tristique eget, ornare eget nisl. Morbi in leo erat, vel sodales lectus. Aenean rhoncus ante a nibh fringilla semper hendrerit eros porttitor. In at nunc nec nunc aliquam dignissim. Suspendisse potenti.</blockquote>
+*/
+blockquote {
+    /*font-size: 1.25em;
+    line-height: 1.33em;
+    padding: 0 40px;*/
+}
+
+/**
+@category Basic Style Guide
+@section Typography
+@title Unordered lists
+@description
+<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+@example
+<ul>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>Integer molestie lorem at massa</li>
+  <li>Facilisis in pretium nisl aliquet</li>
+  <li>Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ul>
+*/
+ul {
+
+}
+
+/**
+@category Basic Style Guide
+@section Typography
+@title Ordered lists
+@description
+<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+@example
+<ol>
+  <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+      <ol>
+        <li>Phasellus iaculis neque</li>
+        <li>Purus sodales ultricies</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+        <li>Ac tristique libero volutpat at</li>
+      </ol>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+</ol>
+*/
+ol {
+
+}
+
+li {
+    /*padding-bottom: 5px;*/
+}
+
+/**
+@category Basic Style Guide
+@title Tables
+@description
+These represent the basic usages of tables in the application
+@example
+<table>
+<thead>
+    <tr>
+        <th>th 1</th>
+        <th>th 2</th>
+        <th>th 3</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>td 1</td>
+        <td>td 2</td>
+        <td>td 3</td>
+    </tr>
+    <tr>
+        <td>td alt 1</td>
+        <td>td alt 1</td>
+        <td>td alt 1</td>
+    </tr>
+</tbody>
+</table>
+@note
+IE9+ and all other modern browsers support the <code>:nth-child(even)</code> psuedo selector for alternating row colors.
+For IE8 and lower support, you must manually add the class <code>alt</code> to the <code>tr</code> elements.
+*/
+table {
+    /*border: 1px solid #BBB;
+    font-size: 0.8em;
+    width: 50%;*/
+}
+
+thead {
+    /*background: #CCC;*/
+}
+
+th {
+    /*background: #CCC;
+    color: #666;
+    text-align: center;*/
+}
+
+td {
+    /*padding: 5px;
+    border: 1px solid #BBB;*/
+}
+
+tr:nth-child(even) td,
+tr.alt td {
+    /*background: #EEE;*/
+}
+
+/**
+@category Basic Style Guide
+@section Forms
+@title Forms
+@description
+These represent the basic usages of forms in the application
+@example
+<form>
+    <fieldset>
+        <legend>Legend</legend>
+
+        <label>Text</label>
+        <input type="text" value="Input text"/>
+        <input type="text" value="Disabled text" disabled/>
+
+        <label>Textarea</label>
+        <textarea rows="4">Textarea text</textarea>
+        <textarea rows="4" disabled>Disabled text</textarea>
+
+        <label>Select</label>
+        <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select>
+        <select disabled>
+            <option>Disabled 1</option>
+            <option>Disabled 2</option>
+        </select>
+
+        <label>Button</label>
+        <input type="button" value="Button"/>
+        <input type="button" value="Disabled button" disabled/>
+        <input type="submit" value="Submit"/>
+        <input type="submit" value="Disabled submit" disabled/>
+
+        <label>Checkbox</label>
+        <input type="checkbox"/>Unselected
+        <input type="checkbox" checked/>Selected
+        <input type="checkbox" disabled/>Disabled
+
+        <label>Radio</label>
+        <input type="radio"/>Unselected
+        <input type="radio" checked/>Selected
+        <input type="radio" disabled/>Disabled
+    </fieldset>
+</form>
+
+@note You do not include the color (:) in a label, for consistency,
+it is added automatically by the CSS rule.
+*/
+
+legend {
+    /*width: 100%;
+    padding: 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #DDD;*/
+}
+
+label {
+    /*display: block;
+    margin-bottom: 5px;*/
+}
+
+label:after {
+    content: ":"
+}
+
+textarea, input[type="text"] {
+    /*border: 1px solid #CCC;
+    padding: 4px 6px;
+    margin-bottom: 10px;*/
+}
+
+select {
+    /*border: 1px solid #CCC;
+    padding: 4px 6px;
+    width: 190px;*/
+}
+
+/**
+@category Basic Style Guide
+@title Buttons
+@description
+These represent the basic usages of buttons in the application
+
+@example
+<div id="my-buttons">
+    <button class="button">Button</button>
+    <input type="button" class="button" value="Input"/>
+    <input type="submit" class="button" value="Submit"/>
+    <button class="button" disabled>Disabled</button>
+    <button class="button active">Selected</button>
+    <a class="button">Anchor</a>
+</div>
+
+@javascript
+$("#my-buttons > .button").click(function(){
+    alert("You clicked me!");
+});
+*/
+
+button,
+input[type="button"],
+input[type="submit"],
+.button {
+
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.button:hover {
+
+}
+
+button.active,
+input[type="button"].active,
+input[type="submit"].active,
+.button.active {
+
+}
+
+button[disabled],
+input[type="button"][disabled],
+input[type="submit"][disabled],
+.button[disabled] {
+
+}
+
+/**
+@category Basic Style Guide
+@title Icons
+@description
+These represent the basic usages of icons in the application
+@todo To be completed by user
+*/
+
+/**
+@category Basic Style Guide
+@title Navigation
+@description
+These represent the basic usages of navigation in the application
+@todo To be completed by user
+*/

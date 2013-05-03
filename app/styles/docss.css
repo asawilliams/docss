@@ -1,0 +1,408 @@
+/**
+@section General
+@title HTML
+@description
+Docss will provide default font-family declarations, but allow the
+user to specify an override in their included styles. All of
+Docss specific styling should be namespaced with a "docss" class
+prefix so that Docss style on the page for layout is not impacted
+by user styling from CSS that is sucked in for content.
+*/
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html.docss, body.docss {
+    margin: 0;
+    padding: 0;
+}
+
+body.docss {
+    padding-top: 42px;
+}
+
+/**
+@section Header
+@title Header
+@description
+The header has a fixed location at the top of the screen
+and contains the primary section navigation as well as
+primary user actions.
+*/
+
+header.docss {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    background-color: #000000;
+    color: #ffffff;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+header.docss h1 {
+    position: relative;
+    display: inline;
+    line-height: 42px;
+    height: 42px;
+    color: #ffffff;
+    margin: 0 10px 0 10px;
+    padding: 0;
+}
+
+/**
+@section Header
+@title Navigation
+@description
+Header navigation is a list of all &#64;section blocks in the CSS comments
+*/
+
+header.docss nav,
+header.docss ol {
+    position: relative;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 42px;
+}
+
+header.docss nav {
+    top: -8px;
+}
+
+header.docss ol {
+    list-style: none;
+}
+
+header.docss li {
+    position: relative;
+    color: #909999;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+header.docss li.active,
+header.docss li:hover {
+    color: #fff;
+}
+
+header.docss li.active:after {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+}
+
+header.docss a,
+header.docss a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+
+/**
+@section Header
+@title Actions
+@description
+Header actions is a list of buttons for user interactions (such as
+print and save) for the current page.
+*/
+
+header.docss button {
+    float: right;
+    border: none;
+    background: none;
+    text-shadow: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: smaller;
+    height: 42px;
+}
+
+header.docss button:after {
+    margin-left: 10px;
+    content: "|";
+}
+
+header.docss button:first-child:after {
+    content: "";
+}
+
+/**
+@section Content
+@title Article
+@description
+Each article element represents a single unique &#64;section block.
+*/
+
+article.docss {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    margin: 10px;
+}
+
+article.docss.active {
+    position: relative;
+    display: block;
+    visibility: visible;
+}
+
+article.docss nav.docss {
+    position: fixed;
+    top: 60px;
+    width: 250px;
+    margin: 0;
+    border: #ddd solid 1px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #ddd;
+}
+
+article.docss nav.docss ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+article.docss nav.docss li {
+    width: 100%;
+    line-height: 35px;
+    text-indent: 10px;
+    display: block;
+    border-bottom: #ddd solid 1px;
+    color: #000;
+    position: relative;
+}
+
+article.docss nav.docss li:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+article.docss nav.docss li:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+article.docss nav.docss li:hover {
+    background-color: #f5f5f5;
+}
+
+article.docss nav.docss li.active {
+    background-color: #0088cc !important;
+    color: #fff;
+    text-shadow: #000000 1px 1px;
+}
+
+article.docss nav.docss li.active:after {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-color: #ffffff;
+    right: -6px;
+    top: 12px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+}
+
+article.docss nav.docss a,
+article.docss nav.docss a:hover {
+    color: inherit;
+    text-decoration: none;
+    display: list-item;
+}
+
+/**
+@section Content
+@title Section
+@description
+Each section element represents a single &#64;title tag under each unique
+&#64;section tag in a block comment.
+*/
+
+article.docss h1.docss {
+    display: none;
+}
+
+article.docss h1.docss,
+article.docss section.docss.section {
+    margin-left: 270px;
+}
+
+article.docss section.docss {
+    border-top: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+/**
+Anchor scroll fix with fixed header: http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/
+*/
+article.docss section.docss > h2:before {
+    content: "";
+    display: block;
+    height: 42px;
+    margin-top: -42px;
+}
+
+/**
+@section Content
+@title Example
+@description
+Each div.docss-example element represents a single &#64;example tag under each unique
+&#64;title tag in a block comment.
+*/
+
+.docss-example {
+    position: relative;
+    margin: 15px 0;
+    padding: 40px 20px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.docss-example:after {
+    content: "Example";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    border-radius: 4px 0;
+}
+
+.docss-example ~ .prettyprint {
+    position: relative;
+    margin-top: -23px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.docss-example ~ .prettyprint.html:after,
+.docss-example ~ .prettyprint.css:after,
+.docss-example ~ .prettyprint.javascript:after {
+    content: "html";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #fbfbfc;
+    border: 1px solid #dddddd;
+    color: #9da0a4;
+    border-radius: 0 0 0 4px;
+}
+
+.docss-example ~ .prettyprint.javascript:after {
+    content: "javascript";
+}
+
+.docss-example ~ .prettyprint.css:after {
+    content: "css";
+}
+
+pre.prettyprint {
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+}
+
+pre.prettyprint span {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.docss-note {
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border: #bce8f1 solid 1px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+
+.docss-todo {
+    color: #c09853;
+    background-color: #fcf8e3;
+    border: #fbeed5 solid 1px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+
+.docss-warning {
+    color: #b94a48;
+    background-color: #f2dede;
+    border: #eed3d7 solid 1px;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+
+.docss-tag {
+    color: #ffffff;
+    background-color: #999999;
+    border: #ddd solid 1px;
+    border-radius: 10px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin-left: 5px;
+    margin-top: 25px;
+    font-size: small;
+    text-shadow: #000000 1px 1px;
+}
+
+#docss-protocol-unsupported {
+    display: none;
+    max-width: 400px;
+    margin: auto;
+}
+
+code {
+    color: #D14;
+    background-color: #f5f5f5;
+    border: #ddd solid 1px;
+    border-radius: 4px;
+    padding: 2px 4px 2px 4px;
+    font-size: smaller;
+}

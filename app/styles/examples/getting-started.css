@@ -1,0 +1,341 @@
+/**
+@category Getting Started
+@title About docss
+
+@description
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut libero vitae justo accumsan facilisis id sit amet velit.
+Donec vitae justo a lacus blandit mollis. Nam cursus pulvinar massa, eget ultrices nulla venenatis nec. Nulla facilisi.
+Aliquam sit amet feugiat arcu. Fusce tempus sapien a enim mollis viverra. Aliquam vulputate nibh ut risus fringilla eget
+tempor ipsum egestas. Donec et lectus mauris, non vulputate erat. Proin eu est malesuada ante auctor elementum. Lorem
+ipsum dolor sit amet, consectetur adipiscing elit. Donec quis posuere turpis. Nulla facilisi. Praesent in arcu vel
+ligula sagittis molestie id a eros.</p>
+
+<p>Mauris ac rhoncus neque. Praesent volutpat turpis ac massa facilisis auctor. Etiam in ipsum est, at tincidunt ipsum.
+Pellentesque vitae justo diam, vitae facilisis nunc. Suspendisse potenti. Integer accumsan lacinia ligula,
+vel auctor elit tincidunt vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+Aliquam dolor est, vehicula gravida rhoncus nec, lobortis ut augue. Sed sit amet orci erat. Vivamus aliquet libero eu
+magna lacinia in viverra tortor fermentum. Nullam non leo sed lectus dignissim malesuada quis quis mauris. Quisque
+lacinia convallis eleifend. Etiam molestie ante sit amet nisl varius eu sollicitudin felis volutpat. Nunc ante magna,
+condimentum nec sagittis sed, dapibus sagittis erat.</p>
+*/
+.getting-started .about-docss {
+
+}
+
+/**
+@category Getting Started
+@title Installation
+
+@description
+<p>There are a number of ways you can install and run docss. The easiest way is to download the
+<a href="http://docss.cynergy.com/downloads/docss-##=version.zip">latest build</a> from our
+<a href="http://docss.cynergy.com/downloads/">archives</a>. Unzip the file and you can start running docss locally on
+your file system or host it on a web server. See the <a href="#Getting-Started--Configuration">Configuration</a> section
+for more information on how to setup docss to point to your existing css files or start building your own.</p>
+
+<p>docss also offers a Google Chrome extension plug-in which allows you to easily run docss against the current
+active tab in Chrome. This is great during development as docss will scan all CSS files linked to the current page and
+automatically generate the documentation against it! There is no need to manage a separate installation of docss for
+your CSS files. Simply download the
+<a href="https://docss.cynergysystems.com/downloads/docss-##=version-chrome-extension.crx">extension</a> to your desktop,
+then navigate to <code>chrome://extensions</code> and drag the extension file into the browser window.</p>
+
+@warning
+Google Chrome and Apple Safari both block loading of local files when running docss locally and not via a web server.
+As such, you may see additional onscreen instructions about how to work around this when running docss if this issue
+arises. docss will fallback to Flash in this case by default which doesn't have this restriction to load the local
+files, but you may be prompted to allow it one time. Just follow the onscreen instructions to resolve this issue if
+you are affected, Firefox doesn't have this issue.
+
+@note
+If you are executing the docss plugin against a site or page that doesn't have any docss block comments, it will
+renderer the default page (what you are looking at now) for additional setup instructions. The <a href="#Example-Styles">
+Examples</a> section will illustrate some basic controls using the source sites CSS files.
+*/
+.getting-started .installation {
+
+}
+
+/**
+@category Getting Started
+@title Configuration
+
+@description
+<p>Basic configuration is pretty straight forward. All you need to is modify the <code>files</code> property in
+<code>docss.run({...});</code> which can be found in <a target="_blank" href="scripts/docss-run.js">scripts/docss-run.js</a>. Simply
+add to the array a list of CSS file names that docs should document. By default, the only file
+being loaded is the <a target="_blank" href="styles/getting-started.css">styles/getting-started.css</a> file which is generating
+the content you are viewing now.</p>
+
+<p>For more advanced configuration options, you can also modify the rendering behaviour which is executed
+once all CSS files are loaded and parsed. By default, docs uses the Mustache templating engine to render the output
+on the screen. You can modify the template markup in <a target="_blank" href="index.html">index.html</a> and/or define your own
+<code>render</code> function defined in <code>docss.run({...});</code> located in <a target="_blank" href="scripts/docss-run.js">
+scripts/docss-run.js</a>. Default styles may also be modified as needed in <a target="_blank" href="styles/docss.css">styles/docss.css</a>.</p>
+
+@javascript
+docss.run({
+  //optional title to give to your documentation, also uses document title
+  title: "",
+
+  //base URL to resolve relative paths for all files
+  baseURL: "",
+
+  //CSS files to process for document generation
+  files: [
+    ""
+  ],
+
+  //rendering function to display examples on screen once data has been loaded and parsed
+  //see docss.IParserData
+  render: function(data){
+
+  },
+
+  //optional done function to execute when rendering is complete
+  //see docss.IParserData
+  done: function(data){
+
+  }
+});
+
+@note docs will automatically follow any import statements in your CSS files, you don't need to declare them separately.
+
+@note docs will automatically process LESS input files and compile them to CSS for you.
+*/
+.getting-started .configuration {
+
+}
+
+/**
+@category API
+@title Category
+
+@description
+<p>The category tag is used to group together common components. These sections are displayed as top-level navigation items
+in the header panel at the top of the page.</p>
+
+<pre class="prettyprint linenums html">&#64;category API</pre>
+@note
+This tag is optional. If no category is provided, then the section is also used as the category.
+@tag Optional
+*/
+.api .category {
+
+}
+
+/**
+@category API
+@title Section
+
+@description
+<p>The section tag is used to group together common components. These sections are displayed as second-level navigation items
+side panel navigation under the current category.</p>
+
+<pre class="prettyprint linenums html">&#64;section Section</pre>
+@note
+This tag is optional. If no section is provided, then the title is also used as the section.
+@tag Optional
+*/
+.api .section {
+
+}
+
+/**
+@category API
+@title Title
+
+@description
+<p>The title tag is used to name the attached components. These titles are displayed as third-level navigation items
+in the default content panel under the current category.</p>
+
+<pre class="prettyprint linenums html">&#64;title Title</pre>
+</pre>
+*/
+.api .title {
+
+}
+
+/**
+@category API
+@title Description
+
+@description
+<p>In the default rendering configuration, description text is displayed immediately below the section title and above
+the example implementation. You can use full HTML text in your description to customize the displayed output.</p>
+
+<pre class="prettyprint linenums html">&#64;description
+&lt;p&gt;In the default rendering configuration, description text
+is displayed immediately below the section title and above the
+example implementation. You can use full HTML text in your description
+to customize the displayed output.&lt;/p&gt;
+</pre>
+*/
+.api .description {
+
+}
+
+/**
+@category API
+@title Example
+
+@description
+<p>Examples are used both to render actual example output and example source code. This is generally the HTML used
+to illustrate an example of the attached component in its intended use.</p>
+
+<p>This tag supports the optional switch <code>:hidden</code> which will hide source output. Example
+<code>&#64;example:hidden</code>.</p>
+
+<pre class="prettyprint linenums html">&#64;example
+&lt;button class="btn"&gt;Button&lt;/button&gt;
+</pre>
+
+@example
+<button class="btn">Button</button>
+*/
+.api .example {
+
+}
+
+/**
+@category API
+@title JavaScript
+
+@description
+<p>Some components may also require additional javascript to initialize them. If this is the case, use the
+<code>&#64;javascript</code> tag to initialize the output that will be rendered in the
+<code>&#64;example</code> block. This code will both be evaluated and displayed in source format below the example.</p>
+
+<p>This tag supports the optional switches <code>:hidden</code> and <code>:noeval</code> which will hide source
+output and prevent execution respectively. Example <code>&#64;javascript:hidden:noeval</code> (although typically not
+used together).</p>
+
+<pre class="prettyprint linenums html">&#64;javascript
+$("#my-button").click(function(){
+    alert("You clicked me!");
+});
+</pre>
+
+@javascript
+$("#my-button").click(function(){
+    alert("You clicked me!");
+});
+
+@example
+<button class="btn" id="my-button">Button</button>
+
+@warning
+JavaScript will only execute (evaluate) in the presence of an accompanying &#64;example block. This prevents the execution
+of JavaScript code when you are only illustrating a purely JavaScript code example. You may also wrap your JavaScript
+code in a uncalled anonymous function block (ie <code>(function(){//your code here})</code>) to prevent execution.
+Example <code>&#64;style:hidden:noeval (although typically not used together).</code>
+*/
+.api .javascript {
+
+}
+
+/**
+@category API
+@title Style
+
+@description
+<p>Some components may also require additional CSS to initialize them. If this is the case, use the
+<code>&#64;style</code> tag to initialize the output that will be rendered in the
+<code>&#64;example</code> block. These styles will both be evaluated and displayed in source format below the example.</p>
+
+<p>This tag supports the optional switches <code>:hidden</code> and <code>:noeval</code> which will hide source
+output and prevent execution respectively.</p>
+
+<pre class="prettyprint linenums css">&#64;style
+#myStyleID {
+    font-color: red;
+}
+</pre>
+
+@style
+#my-button {
+    color: red;
+    font-size: 20px;
+}
+
+@example
+<button id="my-button">Button</button>
+
+@warning
+JavaScript will only execute (evaluate) in the presence of an accompanying &#64;example block. This prevents the execution
+of JavaScript code when you are only illustrating a purely JavaScript code example. You may also wrap your JavaScript
+code in a uncalled anonymous function block (ie <code>(function(){//your code here})</code>) to prevent execution.
+*/
+.api .style {
+
+}
+
+/**
+@category API
+@title Warning
+
+@description
+<p>Warning's are special flags to warn users about limitations on the specified component. You may specify 0 or more
+separate <code>&#64;warning</code> statements in your comment blocks.</p>
+
+<pre class="prettyprint linenums html">&#64;warning This is an example of a warning!</pre>
+
+@warning This is an example of a warning!
+*/
+.api .warning {
+
+}
+
+/**
+@category API
+@title Note
+
+@description
+<p>Note's are special flags highlight additional information on the specified component. You may specify 0 or more
+separate <code>&#64;note</code> statements in your comment blocks.</p>
+
+<pre class="prettyprint linenums html">&#64;note This is an example of a note!</pre>
+
+@note This is an example of a note!
+*/
+.api .note {
+
+}
+
+/**
+@category API
+@title Todo
+
+@description
+<p>Todo's are special flags to indicate that further work is required on the specified component. You may specify 0 or more
+separate <code>&#64;todo</code> statements in your comment blocks.</p>
+
+<pre class="prettyprint linenums html">&#64;todo This is an example of a todo!</pre>
+
+@todo This is an example of a todo!
+*/
+.api .todo {
+
+}
+
+/**
+@category API
+@title Tag
+
+@description
+<p>Tags's are special flags to indicate intended purpose, such as intended target/supported device for the component.
+You may specify 0 or more separate <code>&#64;tag</code> statements in your comment blocks.</p>
+
+<pre class="prettyprint linenums html">
+&#64;tag Phone
+&#64;tag Tablet
+&#64;tag Desktop
+</pre>
+
+@tag Phone
+@tag Tablet
+@tag Desktop
+*/
+.api .tag {
+
+}

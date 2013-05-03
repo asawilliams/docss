@@ -1,0 +1,9 @@
+/**
+ * @section Buttons
+ * @title Test7 Button
+ * @example
+ * <button class="test7 btn">Test7</button>
+ */
+.test7 {
+    color: yellow;
+}

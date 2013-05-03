@@ -1,0 +1,91 @@
+@media print {
+
+    header.docss {
+        position: relative;
+        background: none;
+        margin: 10px;
+        height: auto;
+    }
+
+    header.docss h1 {
+        display: block;
+        line-height: normal;
+        height: auto;
+        color: #000000;
+        margin: 0.67em 0 0.67em 0;
+        padding: 0;
+    }
+
+    header.docss nav.docss,
+    article.docss nav.docss {
+        display: block;
+        position: relative;
+        top: 0;
+        width: auto;
+        background: none;
+        border: #ddd solid 1px;
+        margin: 0;
+        border-radius: 0;
+        page-break-after: always;
+    }
+
+    header.docss nav.docss ol,
+    article.docss nav.docss ol {
+        top: 0;
+    }
+
+    header.docss nav.docss li,
+    article.docss nav.docss li,
+    article.docss nav.docss li.active{
+        color: black;
+        margin: 0;
+        display: list-item;
+        line-height: 25px;
+        border-bottom: #ddd solid 1px;
+        text-indent: 10px;
+        background: none;
+        text-shadow: none;
+    }
+
+    header.docss nav.docss li:last-child,
+    article.docss nav.docss li:last-child {
+        border-bottom: none;
+    }
+
+    header.docss nav.docss li:after,
+    article.docss nav.docss li:after {
+        display: none;
+    }
+
+    header.docss li.active:after {
+        display: none;
+    }
+
+    article.docss {
+        margin: 10px;
+        page-break-after: always;
+        position: relative;
+        display: block;
+        visibility: visible;
+    }
+
+    article.docss h1.docss,
+    article.docss section.docss.section {
+        display: block;
+        margin-left: 0;
+    }
+
+    .prettyprint.linenums {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    ol.linenums li {
+        text-shadow: none;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+}

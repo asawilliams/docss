@@ -1,0 +1,40 @@
+.docss-example a
+{
+
+}
+
+.docss-example a {
+
+}
+
+.docss-example a, .docss-example b {
+
+}
+
+.docss-example a,
+.docss-example b {
+
+}
+
+.docss-example #c {
+
+}
+
+.docss-example .d {
+
+}
+
+.docss-example a, .docss-example b, .docss-example #c, .docss-example .d {
+
+}
+
+.docss-example a,
+.docss-example b,
+.docss-example #c,
+.docss-example .d {
+
+}
+
+.docss-example a > b #c[type="e"] {
+
+}

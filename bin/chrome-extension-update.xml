@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+  <app appid='lhceimicdmdijokcfnjpdnodghfipcap'>
+    <updatecheck codebase='http://docss.cynergy.com/downloads/docss-0.0.6-chrome-extension.crx' version='0.0.6' />
+  </app>
+</gupdate>

@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+
+    "name": "docss",
+    "description": "This extension will auto generate CSS documentation using docss against the current page",
+    "version": "##=version",
+
+    "update_url": "http://docss.cynergy.com/downloads/chrome-extension-update.xml",
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+    "permissions": [
+        "<all_urls>",
+        "activeTab",
+        "tabs"
+    ],
+
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        }
+    },
+
+    "background": {
+        "scripts": [
+            "scripts/chrome-background.js"
+        ]
+    }
+}

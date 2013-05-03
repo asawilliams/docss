@@ -1,0 +1,19 @@
+/*
+Test following imports
+*/
+
+@import url("../test3.css");
+@import "../test4.css";
+@import 'views/test5.css';
+@import url(views/test6.css);
+@import url('views/test7.css');
+
+/**
+ * @section Buttons
+ * @title Test2 Button
+ * @example
+ * <button class="test2 btn">Test2</button>
+ */
+.test2 {
+    color: red;
+}

@@ -1,0 +1,10 @@
+/**
+ * @section Buttons
+ * @title Test4 Button
+ * @example
+ * <button class="test4 btn">Test4</button>
+ */
+.test4 {
+    color: green;
+    background: url('../../../images/glyphicons-halflings.png');
+}
